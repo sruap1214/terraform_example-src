@@ -17,7 +17,7 @@ class InferenceInput(BaseModel):
 
 # Define the output data schema using Pydantic
 class InferenceOutput(BaseModel):
-    prediction: float # Or list[float] if predicting multiple values
+    prediction: int # Or list[float] if predicting multiple values
 
 # Initialize FastAPI app
 app = FastAPI(title="XGBoost Inference API")
@@ -87,9 +87,10 @@ async def predict(input_data: InferenceInput):
 
         # Make prediction
         prediction = booster.predict(dmatrix)
+        
 
         # Assuming the model returns a single prediction value
-        result = float(prediction[0])
+        result = int(np.argmax(prediction[0]))
 
         return InferenceOutput(prediction=result)
 
