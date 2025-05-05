@@ -8,3 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Infrastructure
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform-version
+.terraform.lock.hcl
+.terraform.tfstate
+.terraform.tfstate.backup
+.terraform.tfstate.*
+.terraform.tfstate.backup.*
