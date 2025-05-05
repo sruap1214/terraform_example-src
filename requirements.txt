@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+xgboost
+scikit-learn # Often useful for preprocessing or model loading
+numpy # Added dependency
+boto3 # Added dependency for S3 access
