@@ -24,8 +24,8 @@ app = FastAPI(title="XGBoost Inference API")
 
 # --- Configuration for S3 ---
 # It's recommended to use environment variables for sensitive info like bucket names
-S3_BUCKET_NAME = os.environ.get("S3_MODEL_BUCKET", "your-s3-bucket-name") # Replace with your bucket name or env var
-S3_MODEL_KEY = os.environ.get("S3_MODEL_KEY", "path/to/your/model.bst") # Replace with the key (path) in your bucket
+S3_BUCKET_NAME = os.environ.get("S3_MODEL_BUCKET", "my-unique-microservice-bucket-12345") # Replace with your bucket name or env var
+S3_MODEL_KEY = os.environ.get("S3_MODEL_KEY", "model/model.bst") # Replace with the key (path) in your bucket
 LOCAL_MODEL_PATH = os.path.join(tempfile.gettempdir(), "model.bst") # Temporary path to store downloaded model
 
 booster = None
