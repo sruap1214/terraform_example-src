@@ -10,6 +10,12 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+variable "instance_count" {
+  description = "The number of EC2 instances to create."
+  type        = number
+  default     = 2
+}
+
 variable "ami_id" {
   description = "The AMI ID for the EC2 instance. Default is Amazon Linux 2."
   type        = string
